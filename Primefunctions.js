@@ -23,7 +23,7 @@ function PrimeGen(input) {
       primes.push(list[i]);
     }
   }
-  console.log(primes);
+  return primes;
 }
 
 PrimeGen(20);
