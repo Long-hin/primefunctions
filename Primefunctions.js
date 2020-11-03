@@ -12,7 +12,7 @@ function PrimeGen(input) {
   for (let i = 0; list[i] < StopValue; i++) {
     if (accepted[i]) {
       for (let e = 0; e < list.length; e++) {
-        if (list[e] % list[i] === 0) {
+        if (list[e] % list[i] === 0 && i !== e) {
           accepted[e] = false;
         }
       }
@@ -32,6 +32,22 @@ function CumulativeSum(input) {
   }
   return WorkSet;
 }
-
+function maxPrimeSum(input) {
+  const list = PrimeGen(input);
+  const sums = CumulativeSum(list);
+  const set = Array(2);
+  let test = 0;
+  for (let i = list.length; i >= 0; i--) {
+    test = _.find(list, function (thing) { if (sums[i] === thing) return true; return false; });
+    console.log(list);
+    if (test !== undefined) {
+      set[0] = test;
+      set[1] = i;
+      break;
+    }
+  }
+  return set;
+}
 console.log(PrimeGen(20));
 console.log(CumulativeSum(PrimeGen(20)));
+console.log(maxPrimeSum(1000));
