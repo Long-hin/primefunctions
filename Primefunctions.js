@@ -25,5 +25,13 @@ function PrimeGen(input) {
   }
   return primes;
 }
+function CumulativeSum(input) {
+  const WorkSet = input;
+  for (let i = 1; i < input.length; i++) {
+    WorkSet[i] += WorkSet[i - 1];
+  }
+  return WorkSet;
+}
 
-PrimeGen(20);
+console.log(PrimeGen(20));
+console.log(CumulativeSum(PrimeGen(20)));
