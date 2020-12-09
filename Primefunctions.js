@@ -55,6 +55,4 @@ function maxPrimeSum(input) {
   tuple = [items[loc], _.max(length)];
   return tuple;
 }
-console.log(PrimeGen(963));
-console.log(CumulativeSum(PrimeGen(20)));
-console.log(maxPrimeSum(1000));
+
