@@ -7,7 +7,8 @@ function PrimeGen(input) {
   list[0] = 2;
   const accepted = Array(arraylen).fill(true);
   const primes = [];
-  for (let i = 0; list[i] < arraylen; i++) {
+  let StopValue = arraylen
+  for (let i = 0; list[i] < StopValue; i++) {
     if (accepted[i]) {
       for (let e = 0; e < list.length; e++) {
         if (list[e] % list[i] === 0 && i !== e) {
