@@ -7,7 +7,7 @@ describe('maxPrimeSum(10000)',function(){
 
 describe('maxPrimeSum(100000)',function(){
   it ('must befaster then 1000 ms',function(done) {
-    this.timeout(1000);
+    this.timeout(2000);
     maxPrimeSum(100000)
   });
 });
