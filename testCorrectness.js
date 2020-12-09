@@ -20,11 +20,11 @@ describe('cumulativeSum([10,11,12,13,14])',function(){
 });
 describe('maxPrimeSum(100)',function(){
   it ('must equal [41, 6]', function(){
-    chai.expect(CumulativeSum([1,2,3,4])).to.deep.equal([1,3,6,10]);
+    chai.expect(maxPrimeSum(100)).to.deep.equal([41, 6]);
   });
 });
 describe('maxPrimeSum(1000)',function(){
   it ('must equal [953, 21]',function() {
-    chai.expect(CumulativeSum([10,11,12,13,14])).to.deep.equal([10,21,33,46,60]);
+    chai.expect(maxPrimeSum(1000)).to.deep.equal([953, 21]);
   });
 });
